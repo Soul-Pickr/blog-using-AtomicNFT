@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>{{blogs.heading}}</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">	
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}"">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+<!-- Responsive-->
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<!-- fevicon -->
+<link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<!-- body -->
+<body class="about_page">
+
+	<div class="header_main">
+		<div class="container">
+			<div class="logo"><a href="index.html"><img src="{% static 'images/logo.png.png' %}"></a></div>
+		</div>
+	</div>
+	</div>
+	<div class="header">
+		<div class="container">
+        <!--  header inner -->
+            <div class="col-sm-12">
+                 
+                 <div class="menu-area">
+                    <nav class="navbar navbar-expand-lg ">
+                        <!-- <a class="navbar-brand" href="#">Menu</a> -->
+<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                       <i class="fa fa-bars"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                               <li class="nav-item active">
+                                <a class="nav-link" href="/">HOME<span class="sr-only">(current)</span></a> </li>
+                               <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}" >ABOUT</a></li>
+                               <li class="#" href="#">
+      	                        <a class="nav-link" href="{% url 'blog' %}">BLOG</a></li>
+                               <li class="nav-item" href="#">
+      	                        <a class="nav-link" href="{% url 'contact' %}">CONTACT</a></li>
+                               <li class="last"><a href="#"><img src="{% static 'images/search-icon.png' %}" alt="icon"></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- end header end --> 
+    <!--services start -->
+    <div class="about_main">
+        <div class="services_main">
+    	<div class="container">
+    		<div class="creative_taital">
+    			<h1 class="creative_text" >{{blogs.heading}}</h1><br><br>
+                {% if blogs.img1 is not None %}
+                <div><img src="{{blogs.img1.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading1}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints1}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc1}}</p>
+                {% if img2 is not None %}
+                <div><img src="{{blogs.img2.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading2}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints2}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc2}}</p>
+                {% if blogs.img3 is not None %}
+                <div><img src="{{blogs.img3.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading3}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints3}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc3}}</p>
+                {% if blogs.img4 is not None %}
+                <div><img src="{{blogs.img4.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading4}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints4}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc4}}</p>
+                {% if blogs.img5 is not None %}
+                <div><img src="{{blogs.img5.url}}" style="max-width: 100%;"></div><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading5}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints5}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc5}}</p>
+                {% if blogs.img6 is not None %}
+                <div><img src="{{blogs.img6.url}}" style="max-width: 100%;"></div>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading6}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints6}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc6}}</p>
+                {% if blogs.img7 is not None %}
+                <div><img src="{{blogs.img7.url}}" style="max-width: 100%;"></div>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading7}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints7}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc7}}</p>
+                {% if blogs.img8 is not None %}
+                <div><img src="{{blogs.img8.url}}" style="max-width: 100%;"></div>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading8}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints8}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc8}}</p>
+                {% if img9 is not None %}
+                <div><img src="{{blogs.img9.url}}" style="max-width: 100%;"></div>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading9}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints9}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc9}}</p>
+                {% if img10 is not None %}
+                <div><img src="{{blogs.img10.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading10}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints10}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc10}}</p>
+                {% if img11 is not None %}
+                <div><img src="{{blogs.img11.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading11}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints11}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc11}}</p>
+                {% if img12 is not None %}
+                <div><img src="{{blogs.img12.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading12}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints12}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc12}}</p>
+                {% if img13 is not None %}
+                <div><img src="{{blogs.img13.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading13}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints13}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc13}}</p>
+                {% if img14 is not None %}
+                <div><img src="{{blogs.img14.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading14}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints14}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc14}}</p>
+                {% if img15 is not None %}
+                <div><img src="{{blogs.img15.url}}" style="max-width: 100%;"></div><br><br>
+                {% endif %}
+                <h2 style="color:grey; text-align: left"><b>{{blogs.subheading15}}</b></h2>
+                <h3 style="color:red; text-align: left"><b>{{blogs.keypoints15}}</b></h3>
+    			<p style="color: #050000; text-align: left;">{{blogs.desc15}}</p>
+    		</div>    
+    	</div>
+    <!--Contact_section start -->
+    <div class="contact_main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 class="touch_text">Contact Us</h1>
+                </div>
+            </div>
+        </div>
+        <div class="contact_section_2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="map_icon">
+                            <img src="{% static 'images/map-icon.png' %}" style="max-width: 100%;padding-left: 30px; ">
+                            <p class="email-text"><a href="#">SRMCEM,Lucknow<br>UTTAR PRADESH<br>INDIA</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="map_icon">
+                            <img src="{% static 'images/call-icon.png' %}" style="max-width: 100%;padding-left: 30px;">
+                            <p class="email-text"><a href="#">+918840056687</a></p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="map_icon">
+                            <img src="{% static 'images/email-icon.png' %}" style="max-width: 100%; padding-left: 30px;">
+                            <p class="email-text"><a href="#">sksrivas45@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--Contact_section end -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                   <p class="copyright_text">© 2021 All Rights Reserved. <a href="https://html.design">Blogger Diaries</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+ 
+</body>
+</html>
+
